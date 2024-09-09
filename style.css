@@ -594,9 +594,10 @@ padding: 5px;
   .profiles {
     display: flex;
     justify-content: space-around;
-    gap: 40px; /* Add space between the profile containers */
+    gap: 10px; /* Add space between the profile containers */
     flex-wrap: wrap;
-  }
+    padding: 0px 20px;
+}
   
   .profile {
     font-family: "Candara", sans-serif;
