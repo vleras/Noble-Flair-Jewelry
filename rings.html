@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noble Flair Jewllery</title>
+    <!-- Bootstrap: This link imports the Bootstrap CSS framework, providing a variety of ready-to-use styles and components -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons: This link imports a collection of SVG-based icons from the Bootstrap Icons library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Swiper: This link imports the CSS for Swiper, a JavaScript library that enables the creation of responsive and interactive sliders and carousels -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Stylesheet: This link connects to a custom CSS file, `style.css`, used to apply specific styling rules -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Noble Flair Jewllery</h2>
+      <div class="links">
+        <!-- Each of these links will redirect the user to different pages, such as earrings.html, rings.html, etc... -->
+        <!-- The 'active' class styles the current page name with an underline -->
+        <div class="tran"><a href="index.html">Bestsellers</a></div>
+        <div class="tran"><a href="earrings.html">Earrings</a></div>
+        <div class="tran"><a href="Necklaste.html">Necklaces</a></div>
+        <div class="tran active"><a href="rings.html">Rings</a></div>
+        <div class="tran"><a href="bracelets.html">Bracelets</a></div>
+      </div>
+      <!-- This div aligns its child elements centrally and maintains a gap between them. -->
+      <div class="" style="display: flex; align-items: center; gap: 10px">
+        <!-- An icon (bi-person-fill) taken from Bootstrap activates a dropdown menu on click, providing options to "Log in" or "Register". -->
+        <div class="dropdown">
+          <i
+            class="bi bi-person-fill dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            role="button"
+            aria-haspopup="true"
+            style="font-size: 1.5rem"
+          ></i>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="login.html">Log in</a></li>
+            <li><a class="dropdown-item" href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="position-relative">
+          <!-- This class represents the shopping cart icon -->
+          <i class="bi bi-cart-fill" style="font-size: 1.5rem"></i>
+          <!-- This span serves as a badge to display the current number of items in the cart -->
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            id="itemCount"
+            style="font-size: 0.75rem"
+          >
+            0
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!--Serves as a container for the product cards and the header title-->
+    <div class="product-items">
+      <div class="top-text">
+        <h1>Rings</h1>
+        <p>Discover silver and gold rings for every occasion.</p>
+      </div>
+
+      <!-- - Displays a product card featuring an image with a hover effect, title, description, and an "Add to Cart" button  -->
+      <div class="big-container">
+        <!-- Grown Diamond Zig-Zag Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/6ring.jpg" class="default-image" />
+            <img src="images/6hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Grown Diamond Zig-Zag Ring</div>
+            <div class="e-material">14k Yellow Gold, Lab Grown Diamond</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$278</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pearl & Diamond Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/ring.jpg" class="default-image" />
+            <img src="images/2hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Pearl & Diamond Ring</div>
+            <div class="e-material">14k Yellow Gold, Natural Diamond</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$278</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charlotte Slim Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/3ring.jpg" class="default-image" />
+            <img src="images/3hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Charlotte Slim Ring</div>
+            <div class="e-material">Gold Vermeil</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$78</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dôme Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/4ring.jpg" class="default-image" />
+            <img src="images/4hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Dôme Ring</div>
+            <div class="e-material">Gold Vermeil</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$68</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stacker Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/5ring.jpg" class="default-image" />
+            <img src="images/5hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Stacker Ring</div>
+            <div class="e-material">14k Yellow Gold</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$88</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duet Mixed Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/1ring.jpg" class="default-image" />
+            <img src="images/1hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Duet Mixed Ring</div>
+            <div class="e-material">Gold Vermeil, Sterling Silver</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$98</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puffy Charlotte Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/7ring.jpg" class="default-image" />
+            <img src="images/7hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Puffy Charlotte Ring</div>
+            <div class="e-material">Gold Vermeil</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$78</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mixed Tube Ring -->
+        <div class="product">
+          <div class="e-image">
+            <img src="images/8ring.jpg" class="default-image" />
+            <img src="images/8hover.jpg" class="hover-image" />
+          </div>
+          <div class="e-info">
+            <div class="e-name">Mixed Tube Ring</div>
+            <div class="e-material">Gold Vermeil, White Topaz</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="e-price">$98</div>
+              <button type="button" class="btn btn-light" onclick="addToCart()">
+                Add to Card
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This footer is divied in 4 sections, like Help, Stores and services, a signup form for email offers, and icons for social media -->
+    <footer>
+      <div class="main-footer">
+        <div class="first-second">
+          <div class="footer-sub">
+            <h2>Help</h2>
+            <a href="#">Shipping</a>
+            <a href="#">Returns & Exchanges</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="footer-sub">
+            <h2>Stores & Services</h2>
+            <a href="#">Stores</a>
+            <a href="#">Piercing Studio</a>
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="third-fourth">
+          <div class="footer-sub third">
+            <h2>LET'S STAY IN TOUCH!</h2>
+            <p>
+              Enter your email to receive special offers, exclusive discounts,
+              and early access to our sales events directly in your inbox!
+            </p>
+
+            <div class="email">
+              <input type="email" placeholder="Enter your email" />
+            </div>
+            <div class="button">
+              <input type="button" value="Submit" />
+            </div>
+          </div>
+
+          <div class="icons">
+            <img
+              src="images/instagram.png"
+              alt="instagram"
+              width="40px"
+              height="40px"
+              40px;
+            />
+            <img
+              src="images/facebook-svgrepo-com.png"
+              alt="Facebook"
+              width="30px"
+            />
+            <img
+              src="images/tik-tok-svgrepo-com.svg"
+              alt="tik-tok"
+              width="30px"
+              height="30px"
+            />
+            <img
+              src="images/pinterest.png"
+              alt="pinterest"
+              width="30px"
+              height="30px"
+              style="margin-left: 5px"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- These scripts integrate Bootstrap functionalities, Swiper for interactive sliders, and custom JavaScript   -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

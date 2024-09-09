@@ -1,0 +1,915 @@
+/* Google Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    /* Hides horizontal overflow. */
+    overflow-x: hidden; 
+    font-family: "Roboto", sans-serif;
+
+}
+html, body {
+    height: 100%;
+}
+
+.navbar {
+
+    /* The navbar remains visible at the top of the screen as you scroll down the page. */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 0px 30px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(238, 216, 187);
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+}
+
+.navbar1 {
+    font-size: 35px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.links a {
+    /* Removes underlines, from links */
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.tran {
+    position: relative;
+    padding: 30px 10px;
+}
+
+.tran a:hover {
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    transition-duration: 100ms;
+}
+
+
+
+.best-sellers {
+    text-align: center;
+    font-size: 35px;
+    padding: 50px;
+    background-color: rgb(238, 216, 187);
+    height: 100%;
+
+}
+
+.best-sellers h2 {
+    padding-top: 30px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 50px;
+}
+
+.card .image-box {
+    height: 300px;
+}
+
+.card.swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: auto !important;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Ensures content does not overflow the radius */
+}
+
+.card .image-box img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: black;
+    border-color: black;
+}
+
+
+.image-box {
+    width: 100%;
+    /* Full width of the card */
+    height: 250px;
+    /* Fixed height for image box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.info {
+    display: flex;
+    text-align: left;
+    padding: 15px;
+    width: 100%;
+    /* Aligns with the width of the image box */
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+    /* Minimum height for the text area */
+}
+
+.main-footer {
+    background-color: rgba(0, 0, 0, 0.862);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    min-height: 400px;
+    padding: 30px;
+    /* Sets a space of 20 pixels between each item in a flex or grid container. */
+    gap: 20px;
+    padding-top: 80px;
+    justify-content: center;
+}
+
+
+.footer-sub h2 {
+    margin-bottom: 23px;
+}
+
+.footer-sub a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+
+}
+
+.footer-sub a:hover {
+    text-decoration: underline;
+}
+
+.email input {
+    width: 300px;
+}
+.dropdown-menu {
+    left: 0; /* Aligns the dropdown to the left side of the button */
+    transform: translateX(-70%); /* shifts the dropdown left */
+    right: auto;
+    margin-top: 10px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    padding: 7px;
+    text-align: center;
+}
+.dropdown-menu.dropdown-item{
+padding: 5px;
+}
+.dropdown-item:hover{
+    background-color: rgb(230, 191, 140);
+    border-radius: 5px;
+   
+}
+.email input,
+.button input {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.button input {
+    background-color: white;
+    color: rgb(52, 52, 52);
+    transition: 0.5s ease;
+}
+
+.button input:hover {
+    background-color: rgb(230, 191, 140);
+    color: black;
+}
+
+.icons {
+    margin-left: 50px;
+    width: 200px;
+
+}
+
+.first-second .footer-sub {
+
+    width: 300px;
+}
+
+.first-second {
+    display: flex;
+}
+
+.footer-sub.third {
+    margin-left: 20px;
+    width: 450px
+}
+.third-fourth {
+    display: flex;
+
+}
+
+
+@media screen and (max-width:1400px) {
+    .main-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icons {
+        margin-left: -0px;
+    }
+
+    .footer-sub.third {
+        margin-left: 0px;
+    }
+
+    .third-fourth .footer-sub.third {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width:1400px) and (min-width:650px) {
+    .first-second {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media screen and (max-width:1395px) {
+    .third-fourth {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .container.swiper {
+        width: 350px !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .first-second {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-second .footer-sub {
+        margin-bottom: 40px;
+    }
+
+    .third-fourth {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+
+@media screen and (max-width:765px) {
+    .tran a{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        gap: 0px;
+    }
+}
+
+.image-box .default-image {
+    opacity: 1;
+}
+
+.image-box .hover-image {
+    opacity: 0;
+}
+
+.image-box:hover .default-image {
+    opacity: 0;
+}
+
+.image-box:hover .hover-image {
+    opacity: 1;
+}
+
+
+.image-box {
+    position: relative;
+    width: 100%;
+    /* Adjust based on your layout needs */
+    height: 250px;
+    /* Adjust based on your layout needs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    min-height: 500px;
+}
+
+.navbar .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Adjusts the gap between the icons */
+    margin-left: auto;
+    /* Positions the icon container to the right of the navbar */
+}
+
+.navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /* Ensures dropdown shows below the icon */
+    right: 0;
+    /* Aligns the dropdown to the right edge of the icon */
+}
+
+
+.about-us .about.one {
+    margin-left: 10%;
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+.about-us .about.two img {
+    max-width: 600px;
+    width: 100%;
+    height: 620px;
+}
+
+.about-text {
+    height: 500px;
+    background-color: rgb(238, 216, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text2 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.text2 p {
+    margin: 0 auto;
+    /* Center-align the text blocks */
+    max-width: 600px;
+    font-size: 2rem;
+    /* Adaptive font size */
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+
+.text2 div {
+    max-width: 750px;
+    font-size: 1.1rem;
+
+}
+
+/*Earrings CSS*/
+
+.top-text {
+    padding-top: 130px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.top-text p {
+    font-size: 200;
+}
+
+.big-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 80px;
+}
+
+
+.product-items {
+    background-color: white;
+    padding-bottom: 7rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    min-width: 330px;
+
+    border-radius: 15px;
+    border: 1px solid rgb(183, 183, 183);
+    overflow: hidden;
+    background-color: rgb(238, 216, 187)
+}
+
+.e-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.e-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.e-info {
+    display: flex;
+
+    flex-direction: column;
+    text-align: left;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.info .name {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.info .material {
+    font-size: 15px;
+}
+
+.info .price {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.e-name {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.d-flex {
+    display: flex;
+    margin-top: 10px;
+}
+.e-price {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.e-image .default-image {
+    opacity: 1;
+}
+
+.e-image .hover-image {
+    opacity: 0;
+}
+
+.e-image:hover .default-image {
+    opacity: 0;
+}
+
+.e-image:hover .hover-image {
+    opacity: 1;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.form-groups{
+    min-width: 350px; 
+    max-width: 400px;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+}
+
+.tran.active a {
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+}
+
+/* Profiles */
+.staff {
+    text-align: center;
+    margin-bottom: 70px; /* Add space between heading and containers */
+  }
+  
+  .people {
+    margin: 0;
+    ;
+    padding: 100px 0px ; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  .people .staff{
+    margin-bottom: 30px;
+  }
+  
+  .profiles {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px; /* Add space between the profile containers */
+    flex-wrap: wrap;
+  }
+  
+  .profile {
+    font-family: "Candara", sans-serif;
+    width: 340px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px; /* Add space around each container */
+  }
+  
+  .background-image img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .profile-image img {
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* This will maintain the aspect ratio and avoid stretching */
+    margin-top: -60px; 
+    position: relative;
+    margin-top: -120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    border: 10px solid #fff;
+    background-position: center top; 
+  }
+  
+  .profile-image img:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-content {
+    padding-top: 20px; /* Adjust the space between the image and the text */
+  }
+  
+  .card-content h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .card-content p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 20px 5px 20px;
+  }
+
+  
+  
+
+/* Common Styles for both Log-in and Register */
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  justify-content: center;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 1px solid #c9ac8c; 
+  font-size: 16px;
+  background-color: #fff; 
+}
+
+form input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgb(186, 154, 111);
+}
+
+.noble {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.error {
+  color: red;
+  padding-left: 5px;
+}
+
+button {
+    width: 120px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgb(186, 154, 111);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;  
+}
+
+button:hover {
+  background-color: rgb(194, 168, 137);
+}
+
+.swiper-container {
+  width: min-content;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+}
+
+.backToHome a {
+  text-align: center;
+  display: block;
+  
+  margin-top: 30px;
+  color: black;
+  text-decoration: underline;
+}
+
+.signUp{
+min-width: 352px;
+text-align: center;
+}
+
+.signUp h1 {
+  color: #292929; 
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.signUp p {
+  color: #292929;
+  font-size: 16px;
+}
+
+.signUp a {
+  color: rgb(54, 45, 32);
+}
+
+.signUp a:hover {
+  text-decoration: none;
+}
+
+/* Specific Styles for Log-in */
+
+.log-in {
+  display: flex;
+  background-color: rgb(238, 216, 187);
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.forgotPass a {
+  text-align: right;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  display: block;
+  color: black;
+}
+.forgot-pass-container{
+    max-width: 350px;
+    min-width: 350px;
+    text-align: right;
+    
+}
+
+/* Specific Styles for Register */
+
+.register {
+  display: flex;
+  background-color: rgb(238, 216, 187);
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.submit{
+    margin-top: 15px;
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    .log-in{
+        flex-direction: column;
+    }
+    
+    
+    form{
+        width: 100% !important;
+    }
+    
+    .register-image{
+        width: 100% !important;
+    
+        height: 50vh;
+    }
+    
+    .register-con{
+        width: 100% !important;
+    }
+    .slider {
+     
+        height: 40vh;
+     }
+        
+    
+
+        .people {
+            padding: 80px 0; 
+        }   
+        .navbar {
+            flex-direction: column;
+            
+            position: static;
+            padding: 30px 0px;
+        }
+    
+        .links {
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .navbar h2 {
+            margin-bottom: 15px;
+        }
+    
+        .tran {
+            position: relative;
+            padding: 0;
+        }
+    
+        .dropdown, .position-relative {
+            margin-top: 10px;  /* Adds spacing to elements in the navbar */
+        }
+    
+        .text2 p {
+            font-size: 20px;
+        }
+        .text2 div{
+           padding: 20px;
+        font-size: 18px;
+        }
+    
+        .footer-sub.third {
+            width: 380px;
+        }
+        .footer-sub h2 {
+            margin-bottom: 23px;
+        }
+    
+        .about-us{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .about-us .about.one{
+            width: 400px;
+            padding: 20px;
+            margin-left: 0%;
+        }
+    
+        
+         .big-container{
+            display: flex;
+            flex-direction: column;
+         }
+    
+        
+     .about-us .about.two img {
+        height: 480px;
+    }
+    .register{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top-text{
+        padding-top: 40px;
+        padding-left: 0px;
+    }
+    
+    .top-text p {
+    font-size: 15px;
+    
+      }
+    
+}
